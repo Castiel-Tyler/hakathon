@@ -1,0 +1,232 @@
+/* ======================================= */
+/* 1. BASE E VARIÁVEIS DE IDENTIDADE VISUAL */
+/* ======================================= */
+
+:root {
+    --green: #2e7d32;
+    --light-green: #e8ffe8;
+    --dark: #0f1a0f;
+    --white: #ffffff;
+    --gray-bg: #f6fff6;
+    --text-color: #1f3d1f;
+    --text-secondary: #234c2a;
+    --border-light: #e6e6e6;
+}
+
+/* Reset Global */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: Arial, sans-serif; 
+}
+
+html, body { 
+    height: 100%; 
+}
+
+body { 
+    background: var(--gray-bg); 
+    color: var(--text-color); 
+    padding: 20px; 
+    padding-bottom: 90px; /* Garante espaço para a nav fixa */
+}
+
+/* ---------------------------------- */
+/* 2. LAYOUT GERAL E TÍTULOS */
+/* ---------------------------------- */
+
+.page-title { 
+    font-size: 1.6rem; 
+    margin-bottom: 20px; 
+}
+
+/* HEADER (Topo da página - Logo) */
+header { 
+    display: flex; 
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px; 
+}
+
+.logo { 
+    width: 200px;
+    height: 150px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* ---------------------------------- */
+/* 3. SEÇÃO HERO E CARDS */
+/* ---------------------------------- */
+
+.hero h1 { 
+    font-size: 1.3rem; 
+    margin-bottom: 10px; 
+    color: var(--green); 
+}
+.hero p { 
+    line-height: 1.5; 
+    color: var(--text-secondary); 
+}
+
+/* Cards e Listas de Funcionalidades */
+.points-summary, .history-box, .login-box, .tree-impact-summary, .tree-map, .feature-box {
+    background: var(--white);
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    box-shadow: 0 6px 18px rgba(8,60,30,0.06);
+}
+
+.feature-box ul { 
+    list-style: none;
+    padding-left: 0; 
+}
+.feature-box li { 
+    padding: 8px 0; 
+    color: var(--text-secondary); 
+}
+
+/* Pontos */
+.points-number { 
+    font-size: 2.1rem; 
+    color: var(--green); 
+    font-weight: 700; 
+}
+
+/* Histórico */
+.transaction-list {
+    list-style: none;
+    padding: 0;
+}
+.transaction-list li { 
+    border-bottom: 1px solid #eee; 
+    padding: 10px 0; 
+    display: flex; 
+    justify-content: space-between;
+}
+
+/* Mapa */
+.map-img { 
+    width: 100%; 
+    border-radius: 12px; 
+    margin-top: 12px; 
+    display: block; 
+}
+
+/* ---------------------------------- */
+/* 4. FORMULÁRIO (LOGIN) E BOTÕES */
+/* ---------------------------------- */
+
+.login-box label {
+    display: block; 
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+.login-box input {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-top: 6px;
+    margin-bottom: 12px;
+}
+
+.btn {
+    background: var(--green);
+    color: var(--white);
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 12px;
+    display: block; 
+    width: 100%;
+    text-align: center;
+    border: none;
+    font-weight: 700;
+    cursor: pointer; 
+    text-decoration: none;
+}
+
+/* ---------------------------------- */
+/* 5. NAVEGAÇÃO INFERIOR FIXA (MOBILE) */
+/* ---------------------------------- */
+
+.bottom-nav {
+    position: fixed; /* FIXA A BARRA */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 480px; 
+    margin: 0 auto;
+    background: var(--white);
+    border-top: 1px solid var(--border-light);
+    padding: 10px 6px;
+    box-shadow: 0 -6px 18px rgba(8,60,30,0.03);
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+/* Lista UL - Flexbox para alinhamento horizontal */
+.bottom-nav ul {
+    list-style: none;
+    display: flex; 
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Links A - Flexbox para alinhamento vertical (texto + ícone) */
+.bottom-nav a { 
+    text-decoration: none;
+    color: #555;
+    font-size: 0.9rem; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 3px;
+    padding: 5px 0;
+    width: 100%; 
+}
+
+/* Link Ativo */
+.bottom-nav a.active, 
+.bottom-nav a[aria-current="page"] {
+    color: var(--green);
+    font-weight: 700;
+}
+
+/* ---------------------------------- */
+/* 6. RESPONSIVIDADE (TABLET/DESKTOP) */
+/* ---------------------------------- */
+
+@media (min-width: 600px) {
+    body { 
+        padding: 32px; 
+        padding-bottom: 110px; 
+    }
+    
+    .page-title { 
+        font-size: 1.8rem; 
+    }
+    
+    .hero h1 { 
+        font-size: 1.6rem; 
+    }
+    
+    .points-number { 
+        font-size: 2.5rem; 
+    }
+    
+    .bottom-nav { 
+        max-width: 720px; 
+        width: calc(100% - 64px); 
+        border-radius: 12px 12px 0 0; 
+    }
+    
+    .bottom-nav a {
+        font-size: 1.1rem;
+    }
+}

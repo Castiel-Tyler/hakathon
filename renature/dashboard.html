@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Pontos - ReNature</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="img/logo.png" /> 
+    <script src="theme.js" defer></script>
+</head>
+<body>
+
+    <header>
+        </header>
+
+    <main>
+        <h1 class="page-title">Seu Dashboard de Pontos</h1>
+
+        <section class="points-summary">
+            <h2>Pontos Atuais</h2>
+            <div class="points-box">
+                <p class="points-number" aria-label="Você tem 265 pontos no total">265</p>
+                <p class="points-text">Faltam **35 pontos** para plantar uma nova árvore.</p>
+            </div>
+            
+            <a href="rewards.html" class="btn-rewards">Ver Recompensas</a>
+        </section>
+
+        <section class="history-box">
+            <h2>Últimos Descartes</h2>
+            <ul class="transaction-list">
+                <li>
+                    <span class="material">📦 Plástico</span>
+                    <span class="points-change">+10 pts</span>
+                    <time datetime="2025-12-11T15:00:00">11/Dez, 15:00</time>
+                </li>
+                <li>
+                    <span class="material">📰 Papel</span>
+                    <span class="points-change">+5 pts</span>
+                    <time datetime="2025-12-10T11:45:00">10/Dez, 11:45</time>
+                </li>
+                <li>
+                    <span class="material">♻️ Alumínio</span>
+                    <span class="points-change">+20 pts</span>
+                    <time datetime="2025-12-09T18:20:00">09/Dez, 18:20</time>
+                </li>
+            </ul>
+            
+            <a href="history.html" class="view-all-link">Ver Histórico Completo</a>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <ul>
+            <li><a href="index.html" class="nav-item">Home</a></li>
+            <li><a href="login.html" class="nav-item">Login</a></li>
+            <li><a href="dashboard.html" class="nav-item active" aria-current="page">Pontos</a></li>
+            <li><a href="trees.html" class="nav-item">Árvores</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

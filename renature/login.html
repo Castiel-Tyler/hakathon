@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ReNature | Acesse sua Conta</title> 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <script src="theme.js" defer></script>
+</head>
+<body>
+
+    <header>
+        </header>
+
+    <main>
+        <h1 class="page-title">Acessar Conta</h1> 
+
+        <section class="login-box" aria-labelledby="login-heading">
+            <h2 id="login-heading" class="visually-hidden">Formulário de Login</h2> 
+            
+            <form action="/login" method="post">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="nome@exemplo.com" required autocomplete="email" />
+
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="password" placeholder="••••••" required autocomplete="current-password" />
+
+                <button type="submit" class="btn">Entrar</button>
+            </form>
+            
+            <div class="login-options">
+                <a href="forgot-password.html">Esqueci minha senha</a>
+                <p>Ainda não tem conta? <a href="register.html">Cadastre-se</a></p>
+            </div>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <ul>
+            <li><a href="index.html" class="nav-item">Home</a></li>
+            <li><a href="login.html" class="nav-item active" aria-current="page">Login</a></li>
+            <li><a href="dashboard.html" class="nav-item">Pontos</a></li>
+            <li><a href="trees.html" class="nav-item">Árvores</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
